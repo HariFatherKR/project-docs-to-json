@@ -7,3 +7,4 @@ Pillow==10.4.0
 python-multipart==0.0.9
 orjson==3.10.7
 SQLModel==0.0.22
+PyMuPDF==1.24.10

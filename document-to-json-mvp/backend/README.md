@@ -17,7 +17,12 @@ uvicorn main:app --reload
 
 ### Environment Variables
 - `TOKKI_DEBUG` (optional): enable verbose logging for adapters.
+- `TOKKI_ENABLE_OCR` (optional): set to `1/true` to enable OCR fallback for image-only content.
+- `TOKKI_OCR_LANGS` (optional): comma-separated Tesseract language codes (default `eng`).
+- `TOKKI_OCR_CONFIG` (optional): 추가 tesserract 옵션 (예: `--oem 3 --psm 6`).
 - `TESSERACT_CMD` (optional): path to the `tesseract` binary when OCR is enabled.
+
+> macOS: `brew install tesseract` 후 `export TESSERACT_CMD=/opt/homebrew/bin/tesseract`처럼 경로를 지정하세요.
 
 ### Folder Layout
 - `main.py` — FastAPI entry point and routing.

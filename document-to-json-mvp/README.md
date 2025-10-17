@@ -26,3 +26,7 @@ Follow `../AGENTS.md` and `../TASK.md` for contributor guidelines and the active
    npm run dev
    ```
 3. 브라우저에서 `http://localhost:3000` 접속 후 문서를 업로드하여 JSON 결과를 확인합니다.
+
+### OCR 페일백 사용
+- 이미지 기반 문서까지 처리하려면 `brew install tesseract tesseract-lang` 후 `export TESSERACT_CMD=/opt/homebrew/bin/tesseract` 등으로 경로를 지정하세요.
+- 서버 실행 전에 `export TOKKI_ENABLE_OCR=1`, `export TOKKI_OCR_LANGS=kor+eng` (필요 시 `TOKKI_OCR_CONFIG="--oem 3 --psm 6"`) 등을 설정하면 PDF/DOCX에 포함된 이미지 텍스트도 추출됩니다.
